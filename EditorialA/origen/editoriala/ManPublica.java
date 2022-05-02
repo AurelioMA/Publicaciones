@@ -36,47 +36,6 @@ public class ManPublica {
          Arrpublica.add(objLibro);
     }
 
-public void desplegar() {
-    System.out.println("...OBJETOS EN LA PUBLICACION...");
-     
-    Iterator<Publicaciones> itrPublica = Arrpublica.iterator();
-    while(itrPublica.hasNext()){
-        Publicaciones publica = itrPublica.next();
-        if (publica instanceof Libro ){
-            Libro book = new Libro();
-            book = (Libro)publica;
-            System.out.println("-----LIBRO-----");
-            System.out.println("Titulo: " + book.getTitulo());
-            System.out.println("Precio: " + book.getPrecio());
-            System.out.println("No. Paginas: " + book.getNoPag());
-            System.out.println("ISBN: " + book.getISBN());
-            System.out.println("Autor: " + book.getAutor());
-        }else{
-            if(publica instanceof Revista ){
-                Revista maga = new Revista();
-                maga = (Revista)publica;
-                System.out.println("-----REVISTA-----");
-                System.out.println("Titulo: " + maga.getTitulo());
-                System.out.println("Precio: " + maga.getPrecio());
-                System.out.println("No.Pagninas: " + maga.getNoPag());
-                System.out.println("ISSN: " + maga.getISSN());
-                System.out.println("Número : " + maga.getNumero());
-            } else{
-                if(publica instanceof Periodico){
-                    Periodico newspaper = new Periodico();
-                    newspaper = (Periodico)publica;
-                    System.out.println("-----PERIODICO-----");
-                    System.out.println("Título: " + newspaper.getTitulo());
-                    System.out.println("Precio: " + newspaper.getPrecio());
-                    System.out.println("No.Pagninas: " + newspaper.getNoPag());
-                    System.out.println("Editor: " + newspaper.getEditor());
-                    System.out.println("Secciones: " + newspaper.getSecciones());
-                    }
-                }        
-            }        
-        }
-    }
-   
     public void alta (String ISSN, int num)
     {
          objRevista = new Revista();
