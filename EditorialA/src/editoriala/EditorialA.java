@@ -9,7 +9,7 @@ import vista.Bienvenida;
 
 /**
  *
- * @author areli
+ * @author matias
  */
 public class EditorialA {
 
